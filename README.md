@@ -10,7 +10,9 @@ Huck’s Snip ’n’ Clip is a lightweight macOS menu-bar utility for taking sc
 
 Download the latest free beta from [GitHub Releases](https://github.com/Huckletsplay/hucks-snip-n-clip/releases/latest).
 
-The current build supports macOS 14 or newer and includes both Apple silicon and Intel Mac support.
+The current build requires macOS 14 or newer. The universal package contains native Apple silicon
+and Intel code, but this beta has only been tested on Apple silicon so far. Intel compatibility is
+not yet confirmed.
 
 ## Install the unsigned beta
 
