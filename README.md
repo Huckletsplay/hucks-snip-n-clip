@@ -14,6 +14,9 @@ The current build requires macOS 14 or newer. The universal package contains nat
 and Intel code, but this beta has only been tested on Apple silicon so far. Intel compatibility is
 not yet confirmed.
 
+**Confirmed test environment:** macOS Tahoe 26.1 (build 25B78) on Apple silicon. Earlier supported
+macOS releases and Intel Macs have not yet received hands-on testing.
+
 ## Install the unsigned beta
 
 This early beta is not notarized through Apple’s paid Developer Program, so macOS will initially block it.
