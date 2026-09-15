@@ -41,8 +41,9 @@ Both platforms are public betas.
 - Save to named output folders you set up once and pick from the menu.
 - Assign a shortcut to each output, so you choose the destination before you capture.
 - Name your own files with editable labels and templates, a running counter, and live previews.
-- If a destination folder goes missing, the capture lands in a local Recovery folder instead of
-  being lost. Nothing is ever silently overwritten.
+- If your chosen output goes away — an external drive ejected, a network share offline — captures
+  switch to another output you've set up and tell you they did. A local Recovery folder catches
+  them only when nothing at all is reachable. Nothing is ever silently overwritten.
 
 **Shortcuts**
 
@@ -88,7 +89,7 @@ already part of Windows.
 4. The app starts immediately. Look for the **H** icon in your system tray, near the clock, and
    right-click it for every action and setting.
 
-It installs to `%LOCALAPPDATA%\Programs\QSNC` under your own account. No administrator rights are
+It installs to `%LOCALAPPDATA%\Programs\HucksSnipNClip` under your own account. No administrator rights are
 needed and nothing is written outside your user profile.
 
 To remove it: **Start Menu → Project Playground → Uninstall**, or **Settings → Apps**. Your settings
