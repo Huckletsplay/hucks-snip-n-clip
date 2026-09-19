@@ -83,8 +83,8 @@ hand - it is the first Mac build with it. From then on the app can find new rele
 3. Trigger Region, Window, or Screen from its shortcut.
 4. Keep working—the capture is already named, saved, and routed.
 
-On Windows, you can also paste the latest capture immediately. Snips paste as images; Clips paste as
-video files in applications that accept pasted files.
+On Windows and macOS, you can also paste the latest capture immediately. Snips paste as images;
+Clips paste as video files in applications that accept pasted files.
 
 ## Capture options
 
@@ -106,6 +106,7 @@ track 1 and Microphone as track 2; its MP4 writer does not embed track titles.
 
 Huck's Snip 'n' Clip does not require an account, upload captures, or collect analytics. On both
 Windows and macOS it contacts GitHub only when you explicitly choose **Check for Updates**.
+To report a security issue privately, see [SECURITY.md](SECURITY.md).
 
 ## Verify a download
 
@@ -140,3 +141,98 @@ Expected macOS SHA-256:
 Found a bug or have an idea? Open a
 [GitHub issue](https://github.com/Huckletsplay/hucks-snip-n-clip/issues) with your operating system,
 what you expected, and what happened.
+
+## Source repository
+
+The Windows and macOS applications are independent native implementations of the same product.
+Windows uses C# and WinForms; macOS uses Swift, AppKit, ScreenCaptureKit, and AVFoundation. There is
+currently no shared runtime source.
+
+```text
+windows/   Windows 10+ implementation, tests, installer, and packaging scripts
+macos/     macOS 14+ Swift package, tests, app assembly, and DMG tooling
+artifacts/ Generated local builds and packages (ignored)
+```
+
+The implementations remain separate because capture, global shortcuts, menu integration, audio,
+and video encoding use different operating-system APIs.
+
+## Build on Windows
+
+Requirements:
+
+- Windows 10 version 2004 or newer, 64-bit
+- Windows PowerShell 5.1+
+- .NET Framework 4.x compiler included with Windows
+- [Inno Setup 6](https://jrsoftware.org/isinfo.php) to create the installer
+
+From the repository root:
+
+```powershell
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\windows\test.ps1
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\windows\build.ps1
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\windows\install.ps1
+```
+
+The default suite is deterministic and explicitly reports the real-keyboard integration test as
+skipped. Before a Windows release, run the complete suite from a normal desktop PowerShell window:
+
+```powershell
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\windows\test-interactive.ps1
+```
+
+Create the public installer and checksum:
+
+```powershell
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\windows\release.ps1
+```
+
+Generated Windows files are written below `artifacts/windows/` and are not committed.
+
+## Build on macOS
+
+Requirements:
+
+- macOS 14 or newer
+- Xcode Command Line Tools (`xcode-select --install`); full Xcode is not required
+
+From the repository root:
+
+```bash
+bash macos/test.sh
+bash macos/build.sh
+bash macos/install.sh
+```
+
+For a stable local development signing identity, run `bash macos/setup-signing.sh` once. The script
+creates the identity in your login keychain; it does not place signing credentials in the
+repository.
+
+Create and validate an unsigned universal beta DMG:
+
+```bash
+bash macos/release.sh --unsigned-beta
+```
+
+For Developer ID signing and notarization, set `HUCKS_SNIP_N_CLIP_SIGN_IDENTITY` and
+`HUCKS_SNIP_N_CLIP_NOTARY_PROFILE`, then run `bash macos/release.sh`. Generated macOS files are
+written below `artifacts/macos/` and are not committed.
+
+The macOS source is self-contained by inspection, but it has not been compilation-tested on this
+Windows machine. It still needs build and package validation on a Mac.
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md). Keep platform-specific changes inside their platform
+directory unless a genuinely shared component is introduced.
+
+## License
+
+The public/free version of Huck's Snip 'n' Clip is licensed under the
+[GNU General Public License version 3](LICENSE).
+
+Copyright (C) 2026 Quintin Huckaby
+
+This license applies only to the files published in this public repository. It does not apply to
+separate unpublished or proprietary software, including any future Huck's Snip 'n' Clip Pro source
+code.

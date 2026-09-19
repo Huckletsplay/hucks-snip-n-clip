@@ -1,0 +1,72 @@
+# Build and release output
+artifacts/
+bin/
+obj/
+.build/
+.swiftpm/
+DerivedData/
+*.app/
+*.dmg
+*.exe
+*.msi
+*.pdb
+*.zip
+*.sha256
+*.sha256.txt
+
+# Local app data, captures, and diagnostics
+settings.ini
+Recovery/
+Working/
+Captures/
+*.log
+*.tmp
+*.temp
+*.mkv
+*.mp4
+*.mov
+*.wav
+
+# Credentials and signing material
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.cer
+*.crt
+*.mobileprovision
+secrets/
+.secrets/
+
+# Editors and IDEs
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+*.userprefs
+
+# OS metadata
+.DS_Store
+._*
+Thumbs.db
+ehthumbs.db
+desktop.ini
+.Spotlight-V100/
+.fseventsd/
+.Trashes/
+
+# Private development environments and agent notes
+AGENTS.md
+CLAUDE.md
+.agents/
+.claude/
+Brain #2/
+Ingest/
+Recordings/
+llm-brain/
+chat-notes/
+scratch/
+tmp/
