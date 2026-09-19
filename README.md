@@ -120,7 +120,7 @@ Get-FileHash .\HucksSnipNClip-0.1.5-windows-x64-setup.exe -Algorithm SHA256
 Expected Windows SHA-256:
 
 ```text
-e1af1c222f34c1385d8a8ba0b54e8185036e446c83154e288b333de7d18d9b42
+67784ae3784d88520b04e71f17a64f0f394612c3a58ebf167dcf3355553f2761
 ```
 
 macOS:
