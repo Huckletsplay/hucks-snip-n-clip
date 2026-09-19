@@ -89,7 +89,8 @@ video files in applications that accept pasted files.
 ## Capture options
 
 - PNG Snips: Region, active Window, or full Screen
-- H.264 Clips: Region, Window, or Screen after a `3–2–1` countdown
+- H.264 Clips: Region, Window, or Screen after a `3–2–1` countdown; a Region Clip's area can be reviewed and redrawn first,
+  and starts on Return
 - Pause, resume, and fixed stop controls
 - No audio, computer/system audio, microphone, or both as separate tracks
 - Named Outputs and Output shortcuts
@@ -131,7 +132,7 @@ shasum -a 256 HucksSnipNClip-0.1.5-macOS-universal-unsigned-beta.dmg
 Expected macOS SHA-256:
 
 ```text
-87f5f6550612ea7914ea57dd5e6bc52b4e6b805d4a874e12627f91760ef4fbdf
+718a30e371c8dd731df57ba58372558ef8aa1137a6f9aa106506948633a0300f
 ```
 
 ## Support
