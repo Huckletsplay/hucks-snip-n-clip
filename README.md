@@ -1,187 +1,129 @@
 # Huck's Snip 'n' Clip
 
-A lightweight capture utility for **Windows** and **macOS**. Capture a region, a window, or a whole
-screen — as a still image or a video clip — and send it straight to the folder you want it in.
+Capture what matters, put it where it belongs, and keep moving.
 
-It lives in the Windows system tray and the macOS menu bar. No main window. No sign-in. No uploads.
+Huck's Snip 'n' Clip is a lightweight capture utility for Windows and macOS. It lives in the system
+tray or menu bar instead of taking over your desktop. Use a shortcut to grab a region, window, or
+screen; the result goes straight to the output folder you chose.
 
-**[Download the latest release →](https://github.com/Huckletsplay/hucks-snip-n-clip/releases/latest)**
+No account. No cloud upload. No permanent main window.
 
-Both platforms are public betas.
+## Download
 
----
+Open the [latest release](https://github.com/Huckletsplay/hucks-snip-n-clip/releases/latest) and
+choose the file for your computer:
 
-## What it does
-
-**Capture**
-
-- Snip a region, a specific window, or the display under your pointer, saved as PNG.
-- Clip a region, a window, or the screen to H.264 video after a 3–2–1 countdown.
-- Pause and resume mid-recording — the paused time is left out of the finished file.
-- Freeze the desktop while you drag out a region, so your target can't move underneath you.
-- While a region records, the rest of the desktop dims so you can see exactly what's being captured.
-  The dimming never appears in the finished video.
-
-**Audio**
-
-- Record with no audio, computer/system audio, a microphone, or **both as two separate tracks in one
-  file**, so you can adjust or mute either one in an editor.
-- Independent gain for each source, from muted to 300%.
-- Choose which microphone to use.
-
-**Quality**
-
-- Frame rate: 15, 30, 60, or match your display's refresh rate.
-- Resolution ceiling: Native, 1440p, 1080p, or 720p. It never enlarges a smaller source.
-- Quality: Original, Balanced, or High.
-- Cursor capture is off by default and can be turned on.
-
-**Where files go**
-
-- Save to named output folders you set up once and pick from the menu.
-- Assign a shortcut to each output, so you choose the destination before you capture.
-- Name your own files with editable labels and templates, a running counter, and live previews.
-- If your chosen output goes away — an external drive ejected, a network share offline — captures
-  switch to another output you've set up and tell you they did. A local Recovery folder catches
-  them only when nothing at all is reachable. Nothing is ever silently overwritten.
-
-**Shortcuts**
-
-- Every capture action has an editable global shortcut.
-- Single-press shortcuts, or two-step sequences.
-- Rebind anything from the menu without restarting the app.
-
-**In the tray / menu bar**
-
-- A grayscale **H**. While recording, audio level fills its left side and CPU usage fills its right,
-  turning red when the machine is working too hard.
-- Optionally start automatically when you sign in.
-
-### Differences between the two versions
-
-| | Windows | macOS |
+| Platform | Download | Requirement |
 |---|---|---|
-| Video container | `.mp4` | `.mov` |
-| Two-source audio | two separate tracks, in a fixed order: track 1 computer, track 2 microphone | two separate **named** tracks |
-| Default shortcuts | `Ctrl+Alt+Shift+` S / W / F / C / V / R | `Control-Option-Shift-` S / W / F / C / V / R |
-| Permissions | none needed | Screen Recording must be enabled by hand |
+| Windows | `HucksSnipNClip-0.1.5-windows-x64-setup.exe` | Windows 10 version 2004 or newer, 64-bit |
+| macOS | `HucksSnipNClip-0.1.5-macOS-universal-unsigned-beta.dmg` | macOS 14 or newer |
 
-Windows cannot store a track *title* in an MP4, so the two audio tracks are identified by their
-order rather than by name.
+This is an unsigned public beta. Windows SmartScreen or macOS Gatekeeper will identify the publisher
+as unknown. Installation instructions are below, and every download includes a SHA-256 checksum.
 
----
+## Why use it?
 
-## Install — Windows
+- **Capture without breaking focus.** Global shortcuts handle Region, Window, and Screen Snips or
+  Clips without opening a conventional app.
+- **Skip the file-moving chore.** Named Outputs send captures directly to a project folder, shared
+  folder, or any other location you choose.
+- **Paste immediately.** On Windows, every Snip is copied as an image and every finished Clip is
+  copied as a file, so `Ctrl+V` can put it directly into apps that support that content.
+- **Keep recording controls close.** Start, pause, resume, and stop from the tray/menu bar.
+- **Record usable audio.** Choose computer/system audio, microphone, or both as separate editable
+  tracks in one video.
+- **Choose practical quality.** Control frame rate, resolution ceiling, quality, cursor visibility,
+  microphone, audio gains, shortcuts, and filenames.
+- **Keep captures private.** Captures stay on your computer unless you choose to share them.
 
-Requires **Windows 10 version 2004 or newer, 64-bit**. Nothing else; the .NET runtime it uses is
-already part of Windows.
+## Install on Windows
 
-**Tested on Windows 10 22H2 only.** Windows 11 has not been tested yet.
+1. Download `HucksSnipNClip-0.1.5-windows-x64-setup.exe` from the latest release.
+2. Open it. If SmartScreen appears, choose **More info**, then **Run anyway**.
+3. Follow the installer. A desktop shortcut is optional.
+4. Look for the **H** near the clock. Right-click it for capture actions and settings.
 
-1. Download the `.zip` from the
-   [latest release](https://github.com/Huckletsplay/hucks-snip-n-clip/releases/latest).
-2. Extract the whole ZIP to a folder.
-3. Right-click **Install.ps1** and choose **Run with PowerShell**.
-   If nothing happens, open PowerShell in that folder and run:
-   ```powershell
-   powershell -NoProfile -ExecutionPolicy Bypass -File .\Install.ps1
-   ```
-4. The app starts immediately. Look for the **H** icon in your system tray, near the clock, and
-   right-click it for every action and setting.
+The app installs for your Windows account and does not require administrator access. Remove it from
+**Settings > Apps > Installed apps** or its Start-menu folder. Uninstalling leaves your captures and
+personal settings intact.
 
-It installs to `%LOCALAPPDATA%\Programs\HucksSnipNClip` under your own account. No administrator rights are
-needed and nothing is written outside your user profile.
+To update, open the tray menu and choose **Settings > Check for Updates**. The app downloads the
+installer from this GitHub release page and verifies its published SHA-256 checksum before asking to
+run it.
 
-To remove it: **Start Menu → Project Playground → Uninstall**, or **Settings → Apps**. Your settings
-and saved captures are never deleted by the uninstaller.
+## Install on macOS
 
-### Why Windows warns you
+1. Download and open the DMG.
+2. Drag **Huck's Snip 'n' Clip** into Applications.
+3. Try to open it once. macOS will block this unsigned beta.
+4. Open **System Settings > Privacy & Security**, scroll to Security, and choose **Open Anyway**.
+5. Open the app again and enable it under **Screen & System Audio Recording**.
+6. Allow microphone access only if you want to record a microphone.
 
-This build isn't code-signed, because a Windows signing certificate is a paid yearly product.
-SmartScreen will say the publisher is unknown. To run it anyway, click **More info → Run anyway**.
+The current macOS beta has one known issue: on first launch it can choose an unrelated folder named
+`Ingest` as its default output. Before your first capture, open **Output** in the menu bar and select
+the folder you want. The source correction is scheduled for the next Mac build.
 
-If that bothers you, don't run it — or check the download against the published checksum first.
+## A simple workflow
 
----
+1. Add an Output for the folder where the work belongs.
+2. Assign that Output a shortcut if you switch destinations often.
+3. Trigger Region, Window, or Screen from its shortcut.
+4. Keep working—the capture is already named, saved, and routed.
 
-## Install — macOS
+On Windows, you can also paste the latest capture immediately. Snips paste as images; Clips paste as
+video files in applications that accept pasted files.
 
-Requires **macOS 14 or newer**. The universal build contains native Apple Silicon and Intel code,
-but this beta has only been tested on Apple Silicon so far. Intel compatibility is not yet
-confirmed.
+## Capture options
 
-**Confirmed test environment:** macOS Tahoe 26.1 (build 25B78) on Apple Silicon. Earlier supported
-macOS releases and Intel Macs have not yet received hands-on testing.
+- PNG Snips: Region, active Window, or full Screen
+- H.264 Clips: Region, Window, or Screen after a `3–2–1` countdown
+- Pause, resume, and fixed stop controls
+- No audio, computer/system audio, microphone, or both as separate tracks
+- Named Outputs and Output shortcuts
+- Editable one- or two-step capture shortcuts
+- Custom filename labels and templates with collision-safe saving
+- Recovery storage when no configured Output is reachable
+- Recording frame rate, quality, resolution, cursor, microphone, and gain controls
 
-1. Download the `.dmg` from the
-   [latest release](https://github.com/Huckletsplay/hucks-snip-n-clip/releases/latest).
-2. Open it and drag **Huck's Snip 'n' Clip** into **Applications**.
-3. Open the app once. macOS will refuse to open it — this is expected, see below.
-4. Go to **System Settings → Privacy & Security**, scroll down to the Security section, and
-   choose **Open Anyway**.
-5. Open the app again. It now stays open.
-6. Turn it on under **Privacy & Security → Screen & System Audio Recording**.
-7. Allow microphone access only if you plan to record a microphone.
-
-### Why macOS blocks it the first time
-
-This beta isn't notarized through Apple's paid Developer Program, so macOS treats it as unidentified
-software and asks you to approve it by hand once. That's the only consequence — the app itself is
-unchanged by it. Notarized builds are planned for a later release.
-
----
-
-## Verifying your download
-
-Each download has a matching `.sha256` / `.sha256.txt` file in the release. To confirm yours:
-
-```powershell
-# Windows
-Get-FileHash .\HucksSnipNClip-0.1.5-windows-x64.zip -Algorithm SHA256
-```
-
-```bash
-# macOS
-shasum -a 256 ~/Downloads/HucksSnipNClip-*.dmg
-```
-
-Compare the result against the published checksum.
-
----
+Windows Clips use MP4. macOS Clips with both audio sources use MOV. Windows stores Computer as audio
+track 1 and Microphone as track 2; its MP4 writer does not embed track titles.
 
 ## Privacy
 
-**Everything stays on your own machine.**
+Huck's Snip 'n' Clip does not require an account, upload captures, or collect analytics. The Windows
+version contacts GitHub only when you explicitly choose **Check for Updates**.
 
-Huck's Snip 'n' Clip does not upload your screenshots, recordings, audio, filenames, folder
-locations, or any usage information — not to me, not to anyone. The app contains no networking code
-and no analytics.
+## Verify a download
 
-Captures are written only to the output folder you chose. Your preferences, shortcuts, filename
-counters, and saved destinations are stored locally under your own account. Removing the app does
-not delete your captures or your destination folders.
+Each installer or DMG has a checksum file beside it on the release page.
 
-On macOS, Screen Recording and microphone access are controlled by the system. The app uses them
-only to perform a Snip or Clip that you started, and microphone access only for recording modes that
-include one. You can revoke either permission in System Settings at any time.
+Windows:
 
-If a future release ever adds networking, automatic updates, crash reporting, or analytics, this
-statement will be updated before that release ships.
+```powershell
+Get-FileHash .\HucksSnipNClip-0.1.5-windows-x64-setup.exe -Algorithm SHA256
+```
 
----
+Expected Windows SHA-256:
+
+```text
+b50b4ee07cf94474a4f14ee8b353445dcf92eccc7ca9bad66a53ccb97508641b
+```
+
+macOS:
+
+```bash
+shasum -a 256 HucksSnipNClip-0.1.5-macOS-universal-unsigned-beta.dmg
+```
+
+Expected macOS SHA-256:
+
+```text
+7cdb01090f5507f39d63a490103b4e75284a54c5982fe3710abdeb6be9506e9c
+```
 
 ## Support
 
-Found a bug, or something behaves unexpectedly?
-**[Open an issue](https://github.com/Huckletsplay/hucks-snip-n-clip/issues)** — please include your
-operating system and version.
-
----
-
-## Status
-
-**Windows** — public beta, available above.
-**macOS** — public beta, available above.
-
-This repository is the download and support page for Huck's Snip 'n' Clip. The application source is
-not published here.
+Found a bug or have an idea? Open a
+[GitHub issue](https://github.com/Huckletsplay/hucks-snip-n-clip/issues) with your operating system,
+what you expected, and what happened.
