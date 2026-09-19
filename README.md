@@ -29,7 +29,9 @@ as unknown. Installation instructions are below, and every download includes a S
   folder, or any other location you choose.
 - **Paste immediately.** On Windows, every Snip is copied as an image and every finished Clip is
   copied as a file, so `Ctrl+V` can put it directly into apps that support that content.
-- **Keep recording controls close.** Start, pause, resume, and stop from the tray/menu bar.
+- **Keep recording controls close.** Use recording-only shortcuts or the optional floating H to
+  pause, resume, and stop even when the Windows taskbar is hidden. Move, resize, fade, or disable
+  the controller to fit your workspace.
 - **Record usable audio.** Choose computer/system audio, microphone, or both as separate editable
   tracks in one video.
 - **Choose practical quality.** Control frame rate, resolution ceiling, quality, cursor visibility,
@@ -107,7 +109,7 @@ Get-FileHash .\HucksSnipNClip-0.1.5-windows-x64-setup.exe -Algorithm SHA256
 Expected Windows SHA-256:
 
 ```text
-b50b4ee07cf94474a4f14ee8b353445dcf92eccc7ca9bad66a53ccb97508641b
+e1af1c222f34c1385d8a8ba0b54e8185036e446c83154e288b333de7d18d9b42
 ```
 
 macOS:
