@@ -44,7 +44,7 @@ as unknown. Installation instructions are below, and every download includes a S
 1. Download `HucksSnipNClip-0.1.5-windows-x64-setup.exe` from the latest release.
 2. Open it. If SmartScreen appears, choose **More info**, then **Run anyway**.
 3. Follow the installer. A desktop shortcut is optional.
-4. Look for the **H** near the clock. Right-click it for capture actions and settings.
+4. Look for the **H** near the clock. Left-click it for capture actions and settings.
 
 The app installs for your Windows account and does not require administrator access. Remove it from
 **Settings > Apps > Installed apps** or its Start-menu folder. Uninstalling leaves your captures and
@@ -120,7 +120,7 @@ Get-FileHash .\HucksSnipNClip-0.1.5-windows-x64-setup.exe -Algorithm SHA256
 Expected Windows SHA-256:
 
 ```text
-d9b162bcfe0fc9d3ff01b0dd67d1d1fe711df83430314dfc8793e2d8b6698629
+9f872f4b4e96d2af92bf1164529ca3aa835c6fa0260e6839983e6ea3d8064a90
 ```
 
 macOS:
