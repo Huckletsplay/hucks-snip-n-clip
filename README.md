@@ -66,6 +66,16 @@ run it.
 A fresh install saves to **Pictures > Huck's Snip 'n' Clip** until you choose another folder from
 **Output** in the menu bar.
 
+**Updates.** Choose **Settings > Check for Updates…** in the menu-bar H. The app asks GitHub
+only when you choose it, downloads a newer Mac DMG with its published SHA-256 checksum, verifies
+them, and asks before opening the DMG. Install it the usual way: quit the app, drag the new copy onto
+Applications and replace the old one, then reopen it. It is still an unsigned beta, so macOS may ask
+for **Open Anyway** again, and Screen & System Audio Recording may need switching on again for the
+new copy. Your settings, Outputs, shortcuts and captures are kept.
+
+If your Mac copy has no **Check for Updates…** item under **Settings**, download this DMG once by
+hand - it is the first Mac build with it. From then on the app can find new releases itself.
+
 ## A simple workflow
 
 1. Add an Output for the folder where the work belongs.
@@ -93,8 +103,8 @@ track 1 and Microphone as track 2; its MP4 writer does not embed track titles.
 
 ## Privacy
 
-Huck's Snip 'n' Clip does not require an account, upload captures, or collect analytics. The Windows
-version contacts GitHub only when you explicitly choose **Check for Updates**.
+Huck's Snip 'n' Clip does not require an account, upload captures, or collect analytics. On both
+Windows and macOS it contacts GitHub only when you explicitly choose **Check for Updates**.
 
 ## Verify a download
 
@@ -121,7 +131,7 @@ shasum -a 256 HucksSnipNClip-0.1.5-macOS-universal-unsigned-beta.dmg
 Expected macOS SHA-256:
 
 ```text
-11391983502ce2e8a42aa48c7b226e499d58cbbdc39b027d439db8ab4fe22ed6
+87f5f6550612ea7914ea57dd5e6bc52b4e6b805d4a874e12627f91760ef4fbdf
 ```
 
 ## Support
