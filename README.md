@@ -27,10 +27,11 @@ as unknown. Installation instructions are below, and every download includes a S
   Clips without opening a conventional app.
 - **Skip the file-moving chore.** Named Outputs send captures directly to a project folder, shared
   folder, or any other location you choose.
-- **Paste immediately.** On Windows, every Snip is copied as an image and every finished Clip is
-  copied as a file, so `Ctrl+V` can put it directly into apps that support that content.
+- **Paste immediately.** Every Snip is copied as an image and every finished Clip is copied as a
+  file, so `Ctrl+V` on Windows or `Command-V` on macOS can put it directly into apps that support
+  that content.
 - **Keep recording controls close.** Use recording-only shortcuts or the optional floating H to
-  pause, resume, and stop even when the Windows taskbar is hidden. Move, resize, fade, or disable
+  pause, resume, and stop even when the Windows taskbar or macOS menu bar is hidden. Move, resize, fade, or disable
   the controller to fit your workspace.
 - **Record usable audio.** Choose computer/system audio, microphone, or both as separate editable
   tracks in one video.
@@ -62,9 +63,8 @@ run it.
 5. Open the app again and enable it under **Screen & System Audio Recording**.
 6. Allow microphone access only if you want to record a microphone.
 
-The current macOS beta has one known issue: on first launch it can choose an unrelated folder named
-`Ingest` as its default output. Before your first capture, open **Output** in the menu bar and select
-the folder you want. The source correction is scheduled for the next Mac build.
+A fresh install saves to **Pictures > Huck's Snip 'n' Clip** until you choose another folder from
+**Output** in the menu bar.
 
 ## A simple workflow
 
@@ -121,7 +121,7 @@ shasum -a 256 HucksSnipNClip-0.1.5-macOS-universal-unsigned-beta.dmg
 Expected macOS SHA-256:
 
 ```text
-7cdb01090f5507f39d63a490103b4e75284a54c5982fe3710abdeb6be9506e9c
+11391983502ce2e8a42aa48c7b226e499d58cbbdc39b027d439db8ab4fe22ed6
 ```
 
 ## Support
