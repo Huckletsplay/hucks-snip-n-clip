@@ -71,7 +71,8 @@ chmod +x "$STAGED_APP/Contents/MacOS/HucksSnipNClip"
 find "$STAGED_APP" -name '._*' -delete 2>/dev/null || true
 xattr -cr "$STAGED_APP" 2>/dev/null || true
 
-SIGN_IDENTITY="${HUCKS_SNIP_N_CLIP_SIGN_IDENTITY:-Huck's Snip 'n' Clip Local Signing}"
+DEFAULT_SIGN_IDENTITY="Hucks Snip n Clip Local Signing"
+SIGN_IDENTITY="${HUCKS_SNIP_N_CLIP_SIGN_IDENTITY:-$DEFAULT_SIGN_IDENTITY}"
 SIGNATURE_DETAILS="$(codesign -d --verbose=4 "$STAGED_APP" 2>&1 || true)"
 if [[ "$SIGNATURE_DETAILS" == *"Authority=$SIGN_IDENTITY"* ]]; then
     SIGNED_STABLY=yes

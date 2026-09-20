@@ -16,7 +16,8 @@
 # Undo:      bash setup-signing.sh --remove
 set -euo pipefail
 
-IDENTITY_NAME="${HUCKS_SNIP_N_CLIP_SIGN_IDENTITY:-Huck's Snip 'n' Clip Local Signing}"
+DEFAULT_SIGN_IDENTITY="Hucks Snip n Clip Local Signing"
+IDENTITY_NAME="${HUCKS_SNIP_N_CLIP_SIGN_IDENTITY:-$DEFAULT_SIGN_IDENTITY}"
 KEYCHAIN="$HOME/Library/Keychains/login.keychain-db"
 
 if [ "${1:-}" = "--remove" ]; then

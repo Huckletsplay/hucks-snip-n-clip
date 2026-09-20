@@ -59,7 +59,8 @@ find "$STAGING_APP_DIR" -name '._*' -delete 2>/dev/null || true
 # granted Screen Recording permission survives a rebuild. Without it the signature is a fingerprint
 # of the exact binary, every build looks like different software, and the permission has to be
 # granted all over again. setup-signing.sh creates the identity, once per Mac.
-SIGN_IDENTITY="${HUCKS_SNIP_N_CLIP_SIGN_IDENTITY:-Huck's Snip 'n' Clip Local Signing}"
+DEFAULT_SIGN_IDENTITY="Hucks Snip n Clip Local Signing"
+SIGN_IDENTITY="${HUCKS_SNIP_N_CLIP_SIGN_IDENTITY:-$DEFAULT_SIGN_IDENTITY}"
 
 if security find-identity -v -p codesigning 2>/dev/null | grep -qF "$SIGN_IDENTITY"; then
     echo "Signing as \"$SIGN_IDENTITY\"..."
